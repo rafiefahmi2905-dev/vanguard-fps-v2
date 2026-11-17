@@ -1,13 +1,120 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanguard Web</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VANGUARD PROTOCOL // Tactical FPS</title>
+    
+    <!-- Tailwind CSS CDN (Cukup 1 baris ini) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Orbitron', 'sans-serif'],
+                        sans: ['Rajdhani', 'sans-serif'],
+                    },
+                    colors: {
+                        tactical: {
+                            dark: '#090b10',
+                            panel: '#111622',
+                            accent: '#ff4655',
+                            cyan: '#00f0ff',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #090b10;
+            color: #e2e8f0;
+            background-image: 
+                linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .cut-corner {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-tactical-accent selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-tactical-dark/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-3 h-8 bg-tactical-accent"></div>
+                <span class="font-display font-black text-2xl tracking-wider text-white">VANGUARD</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-lg font-semibold tracking-wider text-slate-300">
+                <a href="#agents" class="hover:text-tactical-cyan transition">AGENTS</a>
+                <a href="#arsenal" class="hover:text-tactical-cyan transition">ARSENAL</a>
+                <a href="#maps" class="hover:text-tactical-cyan transition">ZONES</a>
+            </div>
+            <a href="#play" class="bg-tactical-accent hover:bg-red-600 text-white font-display font-bold px-6 py-2.5 text-sm tracking-widest cut-corner transition">
+                PLAY FREE
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-36 pb-24 px-6 max-w-7xl mx-auto">
+        <div class="border-l-4 border-tactical-cyan pl-4 mb-6">
+            <p class="text-tactical-cyan font-bold tracking-[0.25em] text-sm uppercase">SEASON 04 // BLACKOUT PROTOCOL</p>
+        </div>
+        <h1 class="font-display font-black text-5xl md:text-7xl text-white leading-tight mb-6 max-w-4xl">
+            PRECISION IS <span class="text-tactical-accent">SURVIVAL.</span>
+        </h1>
+        <p class="text-slate-400 text-xl md:text-2xl max-w-2xl mb-10 leading-relaxed">
+            5v5 tactical shooter berbasis kemampuan unik dan tembakan presisi tinggi. Kuasai sudut, koordinasikan tim, dan dominasi zona pertempuran.
+        </p>
+        <div class="flex flex-wrap gap-4">
+            <button class="bg-tactical-accent hover:bg-red-600 text-white font-display font-bold px-8 py-4 tracking-widest cut-corner transition">
+                DEPLOY NOW
+            </button>
+            <button class="border border-slate-600 hover:border-tactical-cyan text-white font-display font-bold px-8 py-4 tracking-widest transition">
+                WATCH TRAILER
+            </button>
+        </div>
+    </section>
+
+    <!-- Agents Section -->
+    <section id="agents" class="py-20 px-6 max-w-7xl mx-auto border-t border-slate-800/80">
+        <h2 class="font-display font-bold text-3xl text-white mb-10 tracking-wider">TACTICAL <span class="text-tactical-cyan">OPERATORS</span></h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-tactical-panel border border-slate-800 p-6 cut-corner hover:border-tactical-accent transition">
+                <span class="text-xs font-bold tracking-widest text-tactical-accent uppercase">DUELIST // ENTRY</span>
+                <h3 class="font-display font-bold text-2xl text-white mt-2 mb-3">SPECTRE</h3>
+                <p class="text-slate-400">Spesialis penyusupan cepat dengan granat kilat dan mobilitas tinggi untuk memecah pertahanan musuh.</p>
+            </div>
+            <div class="bg-tactical-panel border border-slate-800 p-6 cut-corner hover:border-tactical-cyan transition">
+                <span class="text-xs font-bold tracking-widest text-tactical-cyan uppercase">RECON // INTEL</span>
+                <h3 class="font-display font-bold text-2xl text-white mt-2 mb-3">VALKYRIE</h3>
+                <p class="text-slate-400">Menggunakan drone pemindai termal untuk melacak posisi lawan menembus dinding.</p>
+            </div>
+            <div class="bg-tactical-panel border border-slate-800 p-6 cut-corner hover:border-tactical-accent transition">
+                <span class="text-xs font-bold tracking-widest text-tactical-accent uppercase">SENTINEL // DEFENSE</span>
+                <h3 class="font-display font-bold text-2xl text-white mt-2 mb-3">BASTION</h3>
+                <p class="text-slate-400">Mengunci area objektif dengan ranjau sensor dan barikade energi anti-peluru.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 py-10 px-6 text-center text-slate-500 text-sm">
+        <p class="font-display tracking-widest text-slate-400 mb-2">VANGUARD PROTOCOL</p>
+        <p>&copy; 2026 Vanguard Interactive. All tactical rights reserved.</p>
+    </footer>
+
+</body>
 </html>
