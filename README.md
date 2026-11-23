@@ -28,4 +28,3 @@ Landing page resmi bertema game tactical shooter 5v5 yang dibangun menggunakan H
 - HTML5
 - Tailwind CSS (CDN)
 - Google Fonts (Orbitron & Rajdhani)
->>>>>>> be4ddd6604e76cd56f02918a47a0871ac9b3a8c5
