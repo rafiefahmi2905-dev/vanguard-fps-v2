@@ -1,4 +1,5 @@
 import VanguardCounter from "./components/VanguardCounter";
+import VanguardTodo from "./components/VanguardTodo";
 import "./App.css";
 
 function App() {
@@ -14,6 +15,9 @@ function App() {
             </a>
             <a href="#counter" className="hover:text-tactical-cyan transition">
               COUNTER
+            </a>
+            <a href="#todo" className="hover:text-tactical-cyan transition">
+              OBJECTIVES
             </a>
           </div>
         </div>
@@ -32,9 +36,12 @@ function App() {
         </p>
       </section>
 
-      {/* Komponen VanguardCounter (React Hooks: useState) */}
-      <section id="counter" className="py-12 px-6 max-w-7xl mx-auto">
+      {/* Komponen Counter & To-Do List (React Hooks: useState) */}
+      <section id="counter" className="py-8 px-6 max-w-7xl mx-auto space-y-8">
         <VanguardCounter />
+        <div id="todo">
+          <VanguardTodo />
+        </div>
       </section>
 
       {/* Footer */}
