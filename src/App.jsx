@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import { HashRouter, Routes, Route, NavLink } from "react-router-dom";
 import VanguardHudOverview from "./components/VanguardHudOverview";
 import VanguardAgents from "./components/VanguardAgents";
 import VanguardAgentUtility from "./components/VanguardAgentUtility";
@@ -21,7 +21,7 @@ export default function App() {
   ];
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="min-h-screen bg-slate-950 text-white">
         {/* Navbar 8 Halaman */}
         <header className="border-b border-slate-800 bg-slate-900/90 sticky top-0 z-50">
@@ -72,6 +72,6 @@ export default function App() {
           </Routes>
         </main>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
